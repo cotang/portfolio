@@ -1,0 +1,66 @@
+.hamburger{
+	display: none;
+	width: 4rem;
+	height: 4rem;	
+	position: absolute;
+	top: 1rem; 
+	right: 1rem;
+	background-color: @bg-color;
+
+	@media screen and (max-width: @screen-xs-max) {
+		display: inline-block;	
+	}
+
+	span{
+		position: absolute;
+		top: 50%; 
+		left: 50%;
+		transform: translate(-50%, -50%);						
+		display: block;
+		width: 2.5rem;
+		height: 0.3rem;
+		background-color: @brown;
+
+		&:before, &:after {
+			content: '';
+			display: block;
+			width: 2.5rem;
+			height: 0.3rem;
+			background-color: @brown;
+		}
+		&:before {
+			transform: translateY(-250%);
+		}
+		&:after {
+			transform: translateY(150%);
+		}
+	}
+}
+
+.hamburger-opened{
+	display: none;	/* будет изменяться скриптом */
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+	width: 100%;
+	text-align: center;	
+	font-size: @font-p;
+	font-weight: 700;
+	background-color: @bg-color;
+
+ 	@media (min-width: @screen-sm) {
+		display: none !important;			/* не должно изменяться скриптом */
+	}
+
+	&__item{
+		display: block;
+		width: 100%;	
+		border: 1px solid @color-border;
+		margin-top: -1px;
+		padding: 0.5em 0;
+
+		a{
+			color: @brown;			
+		}			
+	}
+}

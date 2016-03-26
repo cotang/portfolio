@@ -1,0 +1,40 @@
+.social{
+	font-size: 0;
+	padding-left: 0;
+	padding: 1rem 0 0;
+
+	&__icon{
+		display: inline-block;
+		padding: 1rem 1.5rem;
+
+		&:nth-child(1) a{
+			background-image: url(../images/svg/github.svg);
+		}
+		&:nth-child(2) a{
+			background-image: url(../images/svg/vk.svg);
+		}
+		&:nth-child(3) a{
+			background-image: url(../images/svg/fb.svg);
+		}
+		&:nth-child(4) a{
+			background-image: url(../images/svg/google.svg);
+		}
+		&:nth-child(5) a{
+			background-image: url(../images/svg/skype.svg);
+		}								
+
+		a{
+			display: block;
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 3rem;
+			height: 3rem;
+			opacity: 0.8;
+			transition: @transition-icons;
+
+			&:hover{
+				opacity: 1;
+			}			
+		}
+	}
+}

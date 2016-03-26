@@ -1,0 +1,84 @@
+.background{
+	width: 100%;
+	height: 100vh;
+	background-attachment: fixed;
+	background-image: url(../images/bg/bg1.jpg);
+	background-position: center;	
+	background-color: #222;	
+	-webkit-background-size: cover;
+	background-size: cover;		
+	position: fixed;
+	top: 0;		
+	z-index: -1;
+	display: table;
+	table-layout: fixed;	
+	text-align: center;
+	transition: background-image ease 2s;
+	color: #fff;
+
+	&__inner{
+		display: table-cell;
+		vertical-align: middle;
+		padding: 0 2rem;
+	}
+
+	&__title{
+		font-size: @font-largest;
+		font-weight: 700;		
+		margin: 0 0 1em;
+		display: block;
+		text-transform: uppercase;
+		letter-spacing: 0.5rem;
+		@media screen and (max-width: @screen-sm) {
+			font-size: @font-title;
+			margin: 0 0 0.5em;	
+		}
+
+		&:after{
+			content: "";
+			display: block;
+			margin: 1em auto 0;
+			background-color: #fff;
+			width: 3em;
+			height: 2px;
+			@media screen and (max-width: @screen-sm) {
+				margin: 0.5em auto 0;	
+			}			
+		}
+	}
+	&__subtitle{
+		font-size: @font-title;	
+		font-weight: 400;		
+		margin: 0.5em 0;
+		@media screen and (max-width: @screen-sm) {
+			font-size: @font-subtitle;
+		}					
+	}
+
+	&__text{
+		font-size: @font-p;			
+		margin: 0 auto;
+	}
+}
+
+
+.bg1{
+	background-image: url(../images/bg/bg1.jpg);	
+	// background-position: center top;
+}
+.bg2{
+	background-image: url(../images/bg/bg2.jpg);
+	// background-position: center;	
+}
+.bg3{
+	background-image: url(../images/bg/bg3.jpg);
+	// background-position: center;	
+}
+.bg4{
+	background-image: url(../images/bg/bg4.jpg);
+	// background-position: center;	
+}
+.bg5{
+	background-image: url(../images/bg/bg5.jpg);
+	// background-position: center bottom;	
+}

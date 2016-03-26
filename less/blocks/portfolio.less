@@ -1,0 +1,95 @@
+.portfolio{
+	background-color: @bg-color;
+	display: table;
+	table-layout: fixed;
+	padding: 2em 5em;
+
+	@media screen and (max-width: @screen-xs) {
+		padding: 2em 2em;	
+	}
+
+	&__inner{
+		display: table-cell;
+		vertical-align: middle;
+		width: 100%;
+	}
+
+	&__title{
+		font-size: @font-title;
+		font-weight: 700;		
+		margin: 0 0 1em;
+		display: block;
+		text-transform: uppercase;
+		@media screen and (max-width: @screen-xs-max) {
+			font-size: @font-subtitle;	
+		}
+		
+		&:after{
+			content: "";
+			display: block;
+			margin: 0.25em auto 0;
+			background-color: @color;
+			width: 3em;
+			height: 2px;
+		}
+	}
+	&__list{
+		font-size: 0;
+	}	
+
+	&__item{
+		font-size: 1rem;
+		display: inline-block;
+		padding: 1em;
+		width: 50%;
+		position: relative;
+		@media screen and (max-width: @screen-xs) {
+			width: 100%;	
+		}
+
+		&:hover .portfolio__link-wrapper{
+			display: block;
+			transition: @transition;						
+		}
+		img{
+			max-width: 100%;
+		}
+	}
+
+	&__link-wrapper{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+		margin: 0 -1em;		
+		display: none;
+	}
+	&__icon{
+		display: inline-block;
+		border: 1px solid #fff;
+		background-color: #000;		
+		border-radius: 50%;
+		padding: 1em;
+		margin: 0.5em;
+		opacity: 0.7;
+		transition: @transition-icons;
+
+		&:after{
+			content: "";
+			display: block;
+			width: 2em;
+			height: 2em;
+		}
+		&:first-child:after{
+			background-image: url(../images/svg/link-portfolio.svg);	
+			background-size: cover;	
+		}
+		&:last-child:after{
+			background-image: url(../images/svg/github-portfolio.svg);		
+			background-size: cover;						
+		}		
+		&:hover{
+			opacity: 1;
+		}
+	}
+}

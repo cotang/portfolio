@@ -1,0 +1,33 @@
+.page{
+	height: 100vh;
+	position: relative;
+	border-bottom: 1px solid @color-border;
+	width: 60em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;	
+	color: @color;	
+
+	@media screen and (min-width: 1680px) {
+		width: 70em;	
+	}	
+
+	@media screen and (max-width: @screen-xs-max) {
+		width: 100%;	
+	}	
+
+	&:last-child{
+		border: none;
+	}
+
+	&__bottom{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background-color: @bg-color;
+		padding: 5em 0;
+		@media screen and (max-width: @screen-sm) {
+			padding: 3em 0;	
+		}		
+	}
+}

@@ -1,0 +1,105 @@
+.contacts{
+	background-color: @bg-color;
+	display: table;
+	table-layout: fixed;
+	padding: 5em 5em;
+
+	@media screen and (max-width: @screen-xs) {
+		padding: 3em 2em;	
+	}	
+
+	&__inner{
+		display: table-cell;
+		vertical-align: middle;
+		width: 100%;
+	}
+
+	&__title{
+		font-size: @font-title;
+		font-weight: 700;		
+		margin: 0 0 1em;
+		display: block;
+		text-transform: uppercase;
+		@media screen and (max-width: @screen-xs-max) {
+			font-size: @font-subtitle;	
+		}		
+
+		&:after{
+			content: "";
+			display: block;
+			margin: 0.25em auto 0;
+			background-color: @color;
+			width: 3em;
+			height: 2px;
+		}
+	}
+
+	&__form{
+		font-size: 0;
+		position: relative;
+	}
+	&__label{
+		display: inline-block;
+		width: 50%;
+
+		&:nth-child(1){
+			text-align: left;
+		}
+		&:nth-child(2){
+			text-align: right;
+		}		
+		&--wide{
+			width: 100%;
+		}
+
+		input{
+			display: block;
+			width: 100%;
+			font-size: @font-p;
+			padding: 0.5em;
+			background-color: @color-formfield;
+			border: 1px solid @color-formfield-border;
+			outline: none;
+			&:focus::-webkit-input-placeholder{
+				color: transparent;					
+			}				
+			&:focus::placeholder{
+				color: transparent;					
+			}			
+		}
+		textarea{
+			margin-top: 1em;
+			font-size: @font-p;			
+			padding: 0.5em;			
+			width: 100%;
+			background-color: @color-formfield;	
+			border: 1px solid @color-formfield-border;
+			outline: none;								
+			display: block;			
+			&:focus::-webkit-input-placeholder{
+				color: transparent;					
+			}				
+			&:focus::placeholder{
+				color: transparent;					
+			}			
+		}
+	}
+	&__success{
+		font-size: @font-p;
+		font-weight: 700;
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translateX(-50%);
+		display: none;
+	}
+	&__error{
+		font-size: @font-p;
+		font-weight: 700;
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translateX(-50%);
+		display: none;
+	}	
+}

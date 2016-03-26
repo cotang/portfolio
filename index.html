@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />	
+	<title>Konstantin Bogdanov / Personal Page</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Open+Sans+Condensed:300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+	<!-- Background + Slider -->
+	<section id="bg" class="background">
+		<div id="bg-inner" class="background__inner">
+			<h1 class="background__title">Konstantin Bogdanov</h1>
+			<h2 class="background__subtitle">Web developer</h2>
+			<p class="background__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		</div>
+	</section>
+
+	<!-- First page -->
+	<div id="first-page" class="page">
+		<header class="page-header">
+			<nav class="page-header__nav">
+				<ul class="page-header__list">
+					<li class="page-header__item"><a href="#bio">Bio</a></li>
+					<li class="page-header__item"><a href="#skills">Skills</a></li>
+					<li class="page-header__item"><a href="#portfolio">Portfolio</a></li>
+					<li class="page-header__item"><a href="#contacts">Contacts</a></li>
+				</ul>
+				<div id="menu-trigger" class="hamburger"><span></span></div>
+				<ul class="hamburger-opened" id="additional-menu">
+					<li class="hamburger-opened__item"><a href="#bio">Bio</a></li>
+					<li class="hamburger-opened__item"><a href="#skills">Skills</a></li>
+					<li class="hamburger-opened__item"><a href="#portfolio">Portfolio</a></li>
+					<li class="hamburger-opened__item"><a href="#contacts">Contacts</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="page__bottom">
+			<a href="#bio" class="btn btn--start">Start the trip</a>
+		</div>
+	</div>
+
+	<!-- About me -->
+	<section id="bio" class="page bio">
+		<!-- <a href="#first-page" class="btn btn--up"></a> -->
+		<div class="bio__inner">
+			<h3 class="bio__title">Who I am</h3>
+			<div class="bio__photo"><img src="images/photo.jpg" height="600" width="600" alt=""></div>
+			<div class="bio__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac rutrum quam, ut venenatis odio. Curabitur lacus lacus, mattis quis lectus a, efficitur commodo ante. Fusce magna sapien, tincidunt dapibus semper eget, ornare eget magna. Nam est nunc, elementum vel nulla rhoncus, pellentesque egestas quam. Integer vestibulum at lorem malesuada varius. Curabitur ultrices metus non orci gravida finibus. Aliquam vehicula lorem mauris, sit amet suscipit nisi rutrum eu. Vestibulum vestibulum eu ex sed bibendum. Duis id felis dolor. Mauris non consectetur sem. In vehicula convallis ante eu porttitor. Proin sodales ligula sed pretium congue. Praesent accumsan pulvinar lacus eu maximus.</div>
+		</div>
+		<a href="#skills" class="btn btn--down"></a>
+	</section>
+
+	<!-- Skills -->
+	<section id="skills" class="page skills">
+		<!-- <a href="#bio" class="btn btn--up"></a> -->
+		<div class="skills__inner">
+			<h3 class="skills__title">My skills</h3>
+			<ul class="skills__table">
+				<li class="skills__cell"><img src="images/icons/html5.png" alt="html5"></li>
+				<li class="skills__cell"><img src="images/icons/css3.png" alt="css3"></li>
+				<li class="skills__cell"><img src="images/icons/less.png" alt="less"></li>	
+				<li class="skills__cell"><img src="images/icons/jquery.png" alt="jquery"></li>
+				<li class="skills__cell"><img src="images/icons/bootstrap.png" alt="bootstrap"></li>
+				<li class="skills__cell"><img src="images/icons/flex.png" alt="flex"></li>	
+				<li class="skills__cell"><img src="images/icons/photoshop.png" alt="photoshop"></li>
+				<li class="skills__cell"><img src="images/icons/illustrator.png" alt="illustrator"></li>
+				<li class="skills__cell"><img src="images/icons/svg.png" alt="svg"></li>
+				<li class="skills__cell"><img src="images/icons/grunt.png" alt="grunt"></li>
+				<li class="skills__cell"><img src="images/icons/gulp.png" alt="gulp"></li>
+				<li class="skills__cell"><img src="images/icons/git2.png" alt="git2"></li>
+			</ul>
+		</div>
+		<a href="#portfolio" class="btn btn--down"></a>
+	</section>
+
+	<!-- Portfolio -->
+	<section id="portfolio" class="page portfolio">
+		<!-- <a href="#skills" class="btn btn--up"></a> -->
+		<div class="portfolio__inner">
+			<h3 class="portfolio__title">My works</h3>
+			<div class="portfolio__list">
+				<div class="portfolio__item">
+					<img src="images/works/creative-star.jpg" alt="">
+					<div class="portfolio__link-wrapper">
+						<a class="portfolio__icon" href="http://cotang.github.io/creative-star"></a>
+						<a class="portfolio__icon" href="https://github.com/cotang/creative-star"></a>
+					</div>
+				</div>
+				<div class="portfolio__item">
+					<img src="images/works/skiin.jpg" alt="">
+					<div class="portfolio__link-wrapper">
+						<a class="portfolio__icon" href="http://cotang.github.io/skiin"></a>
+						<a class="portfolio__icon" href="https://github.com/cotang/skiin"></a>
+					</div>
+				</div>				
+				<div class="portfolio__item">
+					<img src="images/works/green-valley.jpg" alt="">
+					<div class="portfolio__link-wrapper">
+						<a class="portfolio__icon" href="http://cotang.github.io/Green-valley"></a>
+						<a class="portfolio__icon" href="https://github.com/cotang/Green-valley"></a>
+					</div>
+				</div>
+				<div class="portfolio__item">
+					<img src="images/works/snow.jpg" alt="">
+					<div class="portfolio__link-wrapper">
+						<a class="portfolio__icon" href="http://cobalt-studio.ru"></a>
+						<a class="portfolio__icon" href="https://github.com/cotang/cobalt-studio"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="#contacts" class="btn btn--down"></a>
+	</section>
+
+	<div id="last-page" class="page">
+		<!-- Contacts -->
+		<section id="contacts" class="contacts">
+			<!-- <a href="#portfolio" class="btn btn--up"></a> -->
+			<div class="contacts__inner">
+				<h3 class="contacts__title">Keep in touch</h3>
+				<form class="contacts__form" action="contact.php" method="post" id="contact-form">
+					<label class="contacts__label"><input type="text" name="name" placeholder="Name"></label>
+					<label class="contacts__label"><input type="email" name="email" placeholder="Email"></label>
+					<label class="contacts__label contacts__label--wide"><textarea name="message" placeholder="Message" rows="4"></textarea></label>
+					<button type="submit" href="" class="btn btn--send">Send the Message</button>
+					<span class="contacts__success" id="success">Your message was successfully sent!</span>
+					<span class="contacts__error" id="error">Your message wasn't sent. Something went wrong.</span>
+				</form>
+			</div>
+		</section>
+
+		<footer class="page-footer">
+			<!-- Social icons -->
+			<ul class="social">
+				<li class="social__icon"><a target="_blank" href="https://github.com/cotang"></a></li>
+				<li class="social__icon"><a target="_blank" href="https://vk.com/kbogdanov1"></a></li>
+				<li class="social__icon"><a target="_blank" href="https://www.facebook.com/stanley.hyde.98"></a></li>
+				<li class="social__icon"><a href="mailto:kbogdanov1@gmail.com"></a></li>				
+				<li class="social__icon"><a href="skype:lexicon-cosri"></a></li>
+			</ul>
+			<div class="page-footer__bottom">&copy; Konstantin Bogdanov, 2016, inspired by  <a href="http://html5up.net">html5up</a></div>
+		</footer>
+
+	</div>
+
+
+
+	<!-- Scripts -->
+	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="js/jquery.scroolly.js"></script>
+	<script src="js/smooth-scroll.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>
