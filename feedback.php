@@ -1,55 +1,18 @@
 <?php
-// include PHPMailer
-require_once("class.phpmailer.php");
+$recepient = "kbogdanov1@gmail.com";
+$sitename = "Cobalt-studio.com";
 
-// check POST data
-$post = (!empty($_POST)) ? true : false;
+$name = trim($_POST["name"]);
+$email = trim($_POST["email"]);
+$subject = trim($_POST["subject"]);
+$text = trim($_POST["text"]);
+$message = "Имя: $name \nE-mail: $email \nSubject: $subject \nТекст: $text";
 
-// if true then get POST data
-if($post) {
-	if ($_POST["name"]) $name = htmlspecialchars($_POST["name"]);
-	if ($_POST["email"]) $email = htmlspecialchars($_POST["email"]);
-	// if ($_POST["text"]) $text = htmlspecialchars($_POST["text"]);
-	$error = "";
+$headers = 'From: \"$name\"'. '<'.$email.'>' . "\r\n" .
+'Reply-To: '. $email . "\r\n" .
+'X-Mailer: PHP/' . phpversion();
 
-	// check required fields
-	// if empty then add error message
-	if(!$name) {
-		$error .= "Please write name<br>";
-	}
-	if(!$email) {
-		$error .= "Please write E-Mail<br>";
-	}
+$pagetitle = "Новое сообщение с сайта \"$sitename\" на тему \"$subject\"";
 
-	// if not error then send mail
-	if(!$error) {
-		$mail = new PHPMailer(); // init class PHPMailer
-		$mail->From = $email; // e-mail from
-		$mail->FromName = $name; // name from
-		$mail->AddAddress('kbogdanov1@gmail.com', 'Example Name'); // e-mail and name to
-		$mail->IsHTML(true); // HTML format for mail
-		$mail->Subject = "My mail subject"; // mail subject
-
-		// if attached file then add this
-		// if(isset($_FILES['file'])) {
-		// 	if($_FILES['file']['error'][0] == 0){
-		// 		$mail->AddAttachment($_FILES['file']['tmp_name'][0], $_FILES['file']['name'][0]);
-		// 	}
-		// }
-
-		// mail body
-		$message = "<strong>E-mail</strong>: ".$email."<br>";
-		$message .= "<strong>Name</strong>: " .$name."<br>";
-		// $message .= "<strong>Text</strong>:<br>".$text."<br>";
-		$mail->Body = $message;
-
-		// send mail
-		if ($mail->Send()) echo 'OK';
-
-	}
-	else {
-		// if has error then write this
-		echo '<span class="notification-error">'.$error.'</span>';
-	}
-}
+mail($recepient, $pagetitle, $message, "Content-type: text/plain; charset=\"utf-8\"\n From: $recepient");
 ?>

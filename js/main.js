@@ -53,14 +53,14 @@ $(document).ready(function(){
 	]);
 
 
-
 	// Smooth scroll
-	$('a').smoothScroll({
+	var linksSmoothScroll = $('a.smooth-scroll');
+
+	$(linksSmoothScroll).smoothScroll({
 		duration: 1000, // animation speed
-		easing: 'swing', // find more easing options on http://api.jqueryui.com/easings/
+		easing: 'swing', // easing option
 		offset: 0 // custom offset
 	});	
-
 
    // validate contact form
     // $(function() {
