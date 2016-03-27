@@ -47,7 +47,7 @@
 		<!-- <a href="#first-page" class="btn btn--up"></a> -->
 		<div class="bio__inner">
 			<h3 class="bio__title">Who I am</h3>
-			<div class="bio__photo"><img src="images/photo.jpg" height="600" width="600" alt=""></div>
+			<div class="bio__photo"><img src="images/photo-possible.jpg" height="600" width="600" alt=""></div>
 			<div class="bio__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac rutrum quam, ut venenatis odio. Curabitur lacus lacus, mattis quis lectus a, efficitur commodo ante. Fusce magna sapien, tincidunt dapibus semper eget, ornare eget magna. Nam est nunc, elementum vel nulla rhoncus, pellentesque egestas quam. Integer vestibulum at lorem malesuada varius. Curabitur ultrices metus non orci gravida finibus. Aliquam vehicula lorem mauris, sit amet suscipit nisi rutrum eu. Vestibulum vestibulum eu ex sed bibendum. Duis id felis dolor. Mauris non consectetur sem. In vehicula convallis ante eu porttitor. Proin sodales ligula sed pretium congue. Praesent accumsan pulvinar lacus eu maximus.</div>
 		</div>
 		<a href="#skills" class="btn btn--down"></a>
@@ -121,13 +121,15 @@
 			<!-- <a href="#portfolio" class="btn btn--up"></a> -->
 			<div class="contacts__inner">
 				<h3 class="contacts__title">Keep in touch</h3>
-				<form class="contacts__form" action="contact.php" method="post" id="contact-form">
-					<label class="contacts__label"><input type="text" name="name" placeholder="Name"></label>
-					<label class="contacts__label"><input type="email" name="email" placeholder="Email"></label>
-					<label class="contacts__label contacts__label--wide"><textarea name="message" placeholder="Message" rows="4"></textarea></label>
-					<button type="submit" href="" class="btn btn--send">Send the Message</button>
-					<span class="contacts__success" id="success">Your message was successfully sent!</span>
-					<span class="contacts__error" id="error">Your message wasn't sent. Something went wrong.</span>
+				<form id="feedback" class="contacts__form" action="javascript:void(0);" method="post" enctype="multipart/form-data">
+					<label class="contacts__label"><input type="text" name="name" placeholder="Name" minlength="2" required="required"></label>
+					<label class="contacts__label"><input type="email" name="email" placeholder="Email" required="required"></label>
+					<!-- <label class="contacts__label contacts__label--wide"><input type="text" name="subject" placeholder="Subject"></label> -->
+					<!-- <label class="contacts__label contacts__label--wide"><textarea name="text" placeholder="Your text" rows="4" required="required"></textarea></label> -->
+					<button type="submit" class="btn btn--send">Send the Message</button>
+					<!-- <span class="contacts__form-result" id="success">Your message was successfully sent!</span> -->
+					<!-- <span class="contacts__form-result" id="error">Your message wasn't sent. Something went wrong.</span> -->
+					<div class="contacts__form-result form-notif"></div>
 				</form>
 			</div>
 		</section>
@@ -150,10 +152,11 @@
 
 	<!-- Scripts -->
 	<script src="js/jquery-1.11.3.js"></script>
-	<script src="js/jquery.validate.js"></script>
 	<script src="js/jquery.scroolly.js"></script>
 	<script src="js/smooth-scroll.js"></script>
+	<script src="js/sendform.js"></script>	
 	<script src="js/main.js"></script>
+	<!--<script src="js/script.min.js"></script>-->
 
 </body>
 </html>

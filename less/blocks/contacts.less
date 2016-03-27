@@ -42,6 +42,7 @@
 		display: inline-block;
 		width: 50%;
 
+
 		&:nth-child(1){
 			text-align: left;
 		}
@@ -53,6 +54,7 @@
 		}
 
 		input{
+			margin-top: 1em;			
 			display: block;
 			width: 100%;
 			font-size: @font-p;
@@ -68,7 +70,7 @@
 			}			
 		}
 		textarea{
-			margin-top: 1em;
+			margin-top: 1em;	
 			font-size: @font-p;			
 			padding: 0.5em;			
 			width: 100%;
@@ -84,22 +86,13 @@
 			}			
 		}
 	}
-	&__success{
+	&__form-result{
 		font-size: @font-p;
 		font-weight: 700;
 		position: absolute;
 		top: 40%;
 		left: 50%;
 		transform: translateX(-50%);
-		display: none;
+		// display: none;
 	}
-	&__error{
-		font-size: @font-p;
-		font-weight: 700;
-		position: absolute;
-		top: 40%;
-		left: 50%;
-		transform: translateX(-50%);
-		display: none;
-	}	
 }
